@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="/public/estilo.css">
+<script src="/public/script.js"></script>
+<form action="/create" method="post">
+     <fieldset>
+        <div id="box">
+     
+            <div id="fields">      
+                <div id="tittle">
+                    <h1>Cadastro de Funcionário</h1>
+                    <hr class="hr">
+                </div>                 
+                <div id="nome" class="field">
+                    <label for="name">Seu nome</label>
+                    <input type="text" name="name" id="name" placeholder="Nome">
+                </div>                
+                <div id="mail" class="field">
+                    <label for="email">Seu e-mail</label>
+                    <input type="email" name="email" id="email" placeholder="contato@dominico">
+                </div>        
+                <div id="data" class="field">
+                    <label for="birth">Sua data de nascimento</label>
+                    <input type="date" name="birth" id="birth">
+                </div>        
+                <div id="money" class="field">
+                    <label for="salario">Seu salario</label>
+                    <input type="number" step=".01" id="salario">
+                </div>        
+                <div id="job" class="field">
+                    <label for="role">Seu Cargo</label>
+                    <select name="cargo" name="role" id="role" onchange="atribuisalario()">
+                        <option value="sel">selecione...</option>
+                        <option value="ger">Gerente</option>
+                        <option value="ads">Analista de sistemas</option>
+                        <option value="dev">Desenvolvedor</option>
+                        <option value="dba">DBA</option>
+                    </select>
+                </div>
+                <div id="totMoney" class="field">
+                    <label for="salary">Total Salário</label>
+                    <input type="text" name="salary" id="salary" readonly>
+                </div>
+                <div id="save" class="field">
+                    <button class="button" onclick="check(name)"> Gravar
+                        <input style="display: none;" type="submit" value="Gravar">
+                    </button>
+                </div>        
+            </div>
+        </div>
+    </fieldset>
+</form>

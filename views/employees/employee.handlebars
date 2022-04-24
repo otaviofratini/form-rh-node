@@ -1,0 +1,12 @@
+<h1>Funcionário</h1>
+<div class="employee-page">
+    <a href="/">Voltar</a>
+    <h3>{{employee.name}}</h3>
+    <p>{{employee.email}}</p>
+    <p>{{employee.birth}}</p>
+    <p>Salário R${{employee.salary}}</p>
+    <p>Cargo: {{employee.role}}</p>
+    <form action="/remove/{{employee._id}}" method="POST">
+        <input type="submit" class="button" value="Excluir">
+    </form>
+</div>
